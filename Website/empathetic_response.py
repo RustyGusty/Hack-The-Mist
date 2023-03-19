@@ -28,7 +28,7 @@ def empathetic_message(inputMessage: str) -> str:
     finals = response['choices'][0]['message']['content']
     return finals
 
-inputMessage = input("How can I help with generating an empathetic response? Tell me the situation:")
+inputMessage = input("How may I help with generating an empathetic response? Tell me about the situation:")
 text = empathetic_message(inputMessage)
 print(text)
 
