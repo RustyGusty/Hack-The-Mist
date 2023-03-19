@@ -8,7 +8,9 @@ response = None
 def main1():
     global response
     if request.method == "POST":
-        response = request.form.get("query")
+        query = request.form.get("query")
+        from . import empathetic_response
+        response = empathetic_response.empathetic_message(query)
     else:
         pass
     return render_template("submit.html", gpt_response = response)
