@@ -1,8 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Login{% endblock %}
+{% block title %}empathEase{% endblock %}
 {% block content %}
 <form method="POST">
-    <h3 align="center">Login</h3>
+    <br>
+    <h3 align="center"><b>empathEase</b></h3>
     <div class = "form-group">
         <label for="query">How can I help you?</label>
         <input
@@ -14,13 +15,11 @@
         />
     </div>
 
-    <div class = "form-group">
-        <label for="response">
-            {% if gpt_response %}
-            Output: <br> <br>
-            {{ gpt_response }}
-            {% endif %}
-        </label>
+    <div style="width:device-width;height:300px;border:1px solid #999;background-color:rgb(230, 230, 230)">
+        {% if gpt_response %}
+        Output: <br> <br>
+        {{ gpt_response }}
+        {% endif %}
     </div>
     <br />
 
