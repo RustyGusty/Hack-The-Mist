@@ -29,8 +29,8 @@ def empathic_message(user_input: str) -> str:
 
     return response['choices'][0]['message']['content']
 
-inputMessage = input("Input the context:")
-text = empathic_message(inputMessage)
+user_input = input("Input the context:")
+text = empathic_message(user_input)
 print(text)
 
 
