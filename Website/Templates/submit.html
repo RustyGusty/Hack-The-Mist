@@ -5,7 +5,8 @@
     <br>
     <h2 align="center"><b>empathEase</b></h3>
     <div class = "form-group">
-        <label for="query">How can I help you?</label>
+        <label for="query">How can I help with generating an empathetic response? Tell me the situation:
+        </label>
         <input
             type="text"
             class = "form-control"
@@ -15,9 +16,11 @@
         />
     </div>
 
-    <div style="width:device-width;height:300px;border:1px solid #999;background-color:rgb(230, 230, 230)">
-        {% if gpt_response %}
+    <div style="width:device-width;height:1100px;border:1px solid #999;background-color:rgb(230, 230, 230)">
+        {% if gpt_response %} 
+        {% autoescape false %}
         {{ gpt_response }}
+        {% endautoescape %}
         {% endif %}
     </div>
     <br />
