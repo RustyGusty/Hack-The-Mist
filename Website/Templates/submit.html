@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<form method="POST">
+    <h3 align="center">Login</h3>
+    <div class = "form-group">
+        <label for="query">How can I help you?</label>
+        <input
+            type="text"
+            class = "form-control"
+            id="query"
+            name = "query"
+            placeholder = "enter text"
+        />
+    </div>
+
+    <div class = "form-group">
+        <label for="response">
+            {% if gpt_response %}
+            Output: <br> <br>
+            {{ gpt_response }}
+            {% endif %}
+        </label>
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Login</button>
+
+</form>
+{% endblock %}
